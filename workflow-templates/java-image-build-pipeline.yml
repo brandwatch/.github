@@ -14,5 +14,5 @@ jobs:
     name: "Build Pipeline"
     uses: brandwatch/bw-workflow-actions/.github/workflows/java-maven-build-deploy-image.yaml@production
     with:
-      jvm-version: 17
+      jvm-version: 17    # Please update wiht the JVM version of your project
     secrets: inherit

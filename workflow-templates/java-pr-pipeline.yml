@@ -15,5 +15,5 @@ jobs:
     name: "PR Pipeline"
     uses: brandwatch/bw-workflow-actions/.github/workflows/java-maven-pull-request.yaml@production
     with:
-      jvm-version: 17
+      jvm-version: 17    # Please update with the JVM version of your project
     secrets: inherit

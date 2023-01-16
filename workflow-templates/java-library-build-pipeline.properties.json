@@ -1,7 +1,7 @@
 {
     "name": "Java Library Build And Release Pipeline",
     "description": "This pipeline will take a stock Java / Maven repo and provides a build chain to release a library Jar to Artifactory whever a GitHub release is created",
-    "iconName": "repo",
+    "iconName": "octicon repo",
     "categories": [
         "deployment",
         "Java",
