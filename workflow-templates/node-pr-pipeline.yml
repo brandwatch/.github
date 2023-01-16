@@ -18,7 +18,8 @@ jobs:
     name: "PR Pipeline"
     uses: brandwatch/bw-workflow-actions/.github/workflows/node-pull-request.yaml@production
     with:
-      node-version: 18
-      package-manager: npm
-      linter: true
+      node-version: 18 # Can be 16 or 18
+      package-manager: npm # Can be yarn or npm
+      linter: true # optional, will run "npm run lint". Set to false if you do not have a lint configuration
+      test: true # optional, will run "npm test". Set to false if you do not have a test suite yet
     secrets: inherit
