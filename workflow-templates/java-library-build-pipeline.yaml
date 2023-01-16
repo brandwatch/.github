@@ -1,0 +1,19 @@
+name: CI Pipeline - Release Library
+
+on:
+  release:
+    types:
+      - published
+
+permissions:
+  checks: write
+  contents: write
+
+jobs:
+  build-pipeline:
+    name: "Release Pipeline"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/java-maven-build-deploy-library.yaml@production
+    with:
+      jvm-version: 17
+      version: ${{ github.ref_name }}
+    secrets: inherit

@@ -1,0 +1,19 @@
+name: CI Pipeline - Pull Requests
+
+permissions:
+  checks: write
+  contents: read
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - $default-branch
+
+jobs:
+  pr-pipeline:
+    name: "PR Pipeline"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/java-maven-pull-request.yaml@production
+    with:
+      jvm-version: 17
+    secrets: inherit
