@@ -1,4 +1,2 @@
 # .github
-This is the new Org for the whole combined Brandwatch BU.
-
-Before creating any new repos here, please consult with DevP for the time being.
+This special repo contains templates and global policy docs that become avaliable for all repos in this org.
