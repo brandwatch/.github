@@ -1,0 +1,12 @@
+{
+    "name": "Node PR Pipeline",
+    "description": "This pipeline will take a NodeJS repo and provides PR testing and security checks for that repo on any PR raised against the main branch",
+    "iconName": "octicon checklist",
+    "categories": [
+        "code-review",
+        "Node"
+    ],
+    "filePatterns": [
+       "package.json$"
+    ]
+}

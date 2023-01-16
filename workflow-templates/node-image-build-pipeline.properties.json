@@ -1,0 +1,12 @@
+{
+    "name": "Node Docker Image Build And Push Pipeline",
+    "description": "This pipeline will take a stock NodeJS repo and provides a build chain to push a Docker image to Artifactory whenever a new commit is push to the main branch",
+    "iconName": "octicon project-symlink",
+    "categories": [
+        "deployment",
+        "Node"
+    ],
+    "filePatterns": [
+        "package.json$"
+    ]
+}

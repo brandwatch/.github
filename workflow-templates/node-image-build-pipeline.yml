@@ -1,0 +1,21 @@
+name: CI Pipeline - Build Image
+
+permissions:
+  checks: write
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-pipeline:
+    name: "Build Pipeline"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/node-build-deploy-image.yaml@production
+    with:
+      node-version: 18
+      package-manager: npm
+      linter: true
+      build-step: true
+    secrets: inherit

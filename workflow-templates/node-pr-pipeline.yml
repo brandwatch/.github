@@ -1,0 +1,24 @@
+name: CI Pipeline - Pull Requests
+
+permissions:
+  checks: write
+  contents: read
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pr-pipeline:
+    name: "PR Pipeline"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/node-pull-request.yaml@production
+    with:
+      node-version: 18
+      package-manager: npm
+      linter: true
+    secrets: inherit
