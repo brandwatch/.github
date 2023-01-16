@@ -1,13 +1,13 @@
 {
     "name": "Java PR Pipeline",
     "description": "This pipeline will take a stock Java / Maven repo and provides PR testing and security checks for that repo on any PR raised against the main branch",
-    "iconName": "repo",
+    "iconName": "checklist",
     "categories": [
         "code-review",
         "Java",
         "Maven"
     ],
     "filePatterns": [
-        "pom.xml$",
+        "pom.xml$"
     ]
 }

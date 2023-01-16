@@ -8,6 +8,6 @@
         "Maven"
     ],
     "filePatterns": [
-        "pom.xml$",
+        "pom.xml$"
     ]
 }
