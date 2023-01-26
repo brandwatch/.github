@@ -1,0 +1,13 @@
+{
+    "name": "Node Package Pipeline",
+    "description": "This pipeline will take a stock NodeJS repo for an npm package and runs the publish workflow whenever a commit is made to the main branch",
+    "iconName": "octicon project-symlink",
+    "categories": [
+        "deployment",
+        "Node",
+        "Package"
+    ],
+    "filePatterns": [
+        "package.json$"
+    ]
+}
