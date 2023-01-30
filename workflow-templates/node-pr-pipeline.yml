@@ -1,0 +1,27 @@
+# For official documentation on this workflow, please refer to the link below.
+# https://github.com/brandwatch/bw-workflow-actions/blob/dev/workflows/node/node-pull-request.yaml.md
+
+name: CI Pipeline - Pull Requests
+
+permissions:
+  checks: write
+  contents: read
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pr-pipeline:
+    name: "PR Pipeline"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/node-pull-request.yaml@production
+    with:
+      node-version: 18 # Can be 16 or 18
+      linter: true # optional, will run "npm run lint". Set to false if you do not have a lint configuration
+      test: true # optional, will run "npm test". Set to false if you do not have a test suite yet
+    secrets: inherit
