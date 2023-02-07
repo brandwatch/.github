@@ -14,7 +14,7 @@ on:
       - main
   pull_request:
     branches:
-      - main
+      - $default-branch
 
 jobs:
   pr-pipeline:
@@ -24,4 +24,5 @@ jobs:
       node-version: 18 # Can be 16 or 18
       linter: true # optional, will run "npm run lint". Set to false if you do not have a lint configuration
       test: true # optional, will run "npm test". Set to false if you do not have a test suite yet
+      deploy-environment-style: "none" # can be set to commit, label, or the default - "none" - which is not to deploy
     secrets: inherit
