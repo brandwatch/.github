@@ -1,5 +1,5 @@
 # For official documentation on this workflow, please refer to the link below.
-# https://github.com/brandwatch/bw-workflow-actions/blob/production/workflows/node/static-webapp-bundle-deploy.md
+# https://github.com/brandwatch/bw-workflow-actions/blob/production/workflows/static-webapp/static-webapp-bundle-deploy.md
 
 name: CI Pipeline - Build & Deploy Static Webapp
 
