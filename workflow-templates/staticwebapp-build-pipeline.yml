@@ -1,0 +1,19 @@
+# For official documentation on this workflow, please refer to the link below.
+# https://github.com/brandwatch/bw-workflow-actions/blob/production/workflows/node/static-webapp-bundle-deploy.md
+
+name: CI Pipeline - Build & Deploy Static Webapp
+
+permissions:
+  checks: write
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-pipeline:
+    name: "Build Pipeline"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/static-webbapp-bundle-deploy.yaml@production
+    secrets: inherit
