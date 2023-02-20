@@ -15,5 +15,5 @@ on:
 jobs:
   build-pipeline:
     name: "Build Pipeline"
-    uses: brandwatch/bw-workflow-actions/.github/workflows/static-webbapp-bundle-deploy.yaml@production
+    uses: brandwatch/bw-workflow-actions/.github/workflows/static-webapp-bundle-deploy.yaml@production
     secrets: inherit
