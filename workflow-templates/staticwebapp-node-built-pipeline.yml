@@ -1,5 +1,5 @@
 # For official documentation on this workflow, please refer to the link below.
-# https://github.com/brandwatch/bw-workflow-actions/blob/production/workflows/static-webapp/static-webapp-node-built-deploy.md
+# https://github.com/brandwatch/bw-workflow-actions/blob/production/workflows/static-webapp/static-webapp-node-build-deploy.md
 
 name: CI Pipeline - Build Using Node & Deploy Static Webapp
 
