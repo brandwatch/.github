@@ -18,4 +18,5 @@ jobs:
     uses: brandwatch/bw-workflow-actions/.github/workflows/static-webapp-node-built-deploy.yaml@production
     with:
       node-version: 18 # Current LTS versions are supported
+      test: false # Set to true to enable unit testing on build
     secrets: inherit
