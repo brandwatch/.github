@@ -1,0 +1,22 @@
+# For official documentation on this workflow, please refer to the link below.
+# https://github.com/brandwatch/bw-workflow-actions/blob/production/workflows/static-webapp/static-webapp-node-build-deploy.md
+
+name: CI Pipeline - Build Using Node & Deploy Static Webapp
+
+permissions:
+  checks: write
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-pipeline:
+    name: "Build Pipeline"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/static-webapp-node-built-deploy.yaml@production
+    with:
+      node-version: 18 # Current LTS versions are supported
+      test: false # Set to true to enable unit testing on build
+    secrets: inherit
