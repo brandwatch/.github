@@ -1,3 +1,6 @@
+# For official documentation on this workflow, please refer to the link below.
+# https://github.com/brandwatch/bw-workflow-actions/blob/dev/workflows/java/java-maven-pull-request.yaml.md
+
 name: CI Pipeline - Pull Requests
 
 permissions:
@@ -7,6 +10,11 @@ permissions:
 on:
   workflow_dispatch:
   pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
     branches:
       - $default-branch
 
