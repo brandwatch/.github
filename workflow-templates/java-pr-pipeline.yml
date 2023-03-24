@@ -6,6 +6,8 @@ name: CI Pipeline - Pull Requests
 permissions:
   checks: write
   contents: read
+  issues: write
+  pull-requests: write
 
 on:
   workflow_dispatch:
