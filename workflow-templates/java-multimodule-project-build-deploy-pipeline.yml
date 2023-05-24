@@ -1,0 +1,35 @@
+---
+name: CI Pipeline - Java Multimodule Project Build & Deploy
+
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - published
+  push:
+    branches:
+      - main
+
+permissions:
+  checks: write
+  contents: write
+
+jobs:
+  libraries:
+    name: "Build and Deploy Libraries"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/java-maven-multi-libraries-build-deploy.yaml@production
+    if: github.event_name == 'release'
+    with:
+      jvm-version: 17
+      version: ${{ github.ref_name }}
+      integration-tests: false
+    secrets: inherit
+
+  images:
+    name: "Build and Deploy Images"
+    uses: Brandwatch/bw-workflow-actions/.github/workflows/java-maven-multi-images-build-deploy.yaml@production
+    if: github.event_name == 'push'
+    with:
+      jvm-version: 17
+      integration-tests: false
+    secrets: inherit
