@@ -1,0 +1,26 @@
+# For official documentation on this workflow, please refer to the link below.
+# https://github.com/brandwatch/bw-workflow-actions/blob/dev/workflows/node/node-deploy-package.yaml.md
+name: CI Pipeline - Publish Multiple Packages
+
+permissions:
+  checks: write
+  contents: write
+  packages: read
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-pipeline:
+    name: "Publish"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/node-deploy-package.yaml@production
+    with:
+      node-version: 18 # Can be 16 or 18
+      build-step: false # Do you run build before packaging? If so, then set this to true
+      linter: false # optional, will run "npm run lint". Set to false if you do not have a lint configuration
+      test: true # optional, will run "npm test". Set to false if you do not have a test suite yet
+      multiple-packages: true
+      lerna-version: true
+    secrets: inherit
