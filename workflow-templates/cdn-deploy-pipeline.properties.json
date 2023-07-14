@@ -1,0 +1,8 @@
+{
+    "name": "CDN Node Build Deploy",
+    "description": "This pipeline will deploy contents from the source folder into the Cloudfront CDN hosted on cdn.brandwatch.com. You may optionally build with NodeJS",
+    "iconName": "octicon package-dependents",
+    "categories": [
+        "deployment"
+    ]
+}

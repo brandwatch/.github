@@ -1,0 +1,32 @@
+# For official documentation on this workflow, please refer to the link below.
+# https://github.com/brandwatch/bw-workflow-actions/blob/dev/workflows/cdn/cdn-deploy.yaml.md
+
+name: CI Pipeline - CDN Deploy
+
+permissions:
+  checks: write
+  contents: write
+  packages: read
+  id-token: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-pipeline:
+    name: "Build Pipeline"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/cdn-deploy.yaml@production
+    with:
+      service-name: am-devp-cdn-test
+      content-version: ${{ github.sha }}
+      source-folder: static
+      dry-run: true # comment this line to make it the real deal
+
+# Node Build options
+#      build-step: true
+#      test: true
+#      linter: true
+#      node-version: 18
+    secrets: inherit
