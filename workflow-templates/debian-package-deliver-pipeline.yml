@@ -18,6 +18,8 @@ jobs:
     uses: brandwatch/bw-workflow-actions/.github/workflows/debian-package-deliver.yaml@dev
     with:
       package-file: package.deb
+      # prefix is usually first letter of vendor, package-name does not include metadata, but artifact-name does
+      # see http://ftp.debian.org/debian/pool/ for examples on structuring debian packages
       artifactory-directory-and-file: pool/<prefix>/<package-name>/<artifact-name>.deb
       deb-distributions:
       deb-components:
