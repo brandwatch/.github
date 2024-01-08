@@ -18,7 +18,7 @@ jobs:
     uses: brandwatch/bw-workflow-actions/.github/workflows/debian-package-deliver.yaml@dev
     with:
       package-file: package.deb
-      artifactory-directory-and-file: pool/xxx
+      artifactory-directory-and-file: pool/<prefix>/<package-name>/<artifact-name>.deb
       deb-distributions:
       deb-components:
       deb-architectures:
