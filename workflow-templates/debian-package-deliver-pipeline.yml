@@ -1,0 +1,25 @@
+# For official documentation on this workflow, please refer to the link below.
+# https://github.com/brandwatch/bw-workflow-actions/blob/dev/workflows/debian/debian-package-deliver.yaml.md
+
+name: CI Pipeline - Deliver Debian Package
+
+permissions:
+  checks: write
+  contents: read
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy-debian-pipeline:
+    name: "Deliver Debian Package"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/debian-package-deliver.yaml@dev
+    with:
+      package-file: package.deb
+      artifactory-directory-and-file: pool/xxx
+      deb-distributions:
+      deb-components:
+      deb-architectures:
+    secrets: inherit
