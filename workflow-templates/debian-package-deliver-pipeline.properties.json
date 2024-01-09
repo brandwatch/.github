@@ -7,6 +7,6 @@
         "Debian"
     ],
     "filePatterns": [
-        ".deb"
+        "**/DEBIAN/control"
     ]
 }
