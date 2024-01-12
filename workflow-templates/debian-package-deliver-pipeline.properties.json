@@ -1,0 +1,12 @@
+{
+    "name": "Debian Deliver Package to Artifactory Pipeline",
+    "description": "This pipeline will take a specific Debian package and deliver it to Artifactory on each GitHub Release.",
+    "iconName": "octicon package",
+    "categories": [
+        "Artifactory",
+        "Debian"
+    ],
+    "filePatterns": [
+        "**/DEBIAN/control"
+    ]
+}
