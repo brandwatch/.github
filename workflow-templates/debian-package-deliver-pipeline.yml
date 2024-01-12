@@ -5,23 +5,20 @@ name: CI Pipeline - Build and Deliver Debian Package
 
 permissions:
   checks: write
-  contents: read
+  contents: write
+  packages: read
 
 on:
-  push:
-    branches:
-      - "main"
+  release:
+    types: [ released ] # can be `published` to run on pre-release instead of production releases
 
 jobs:
   deploy-debian-pipeline:
     name: "Build and Deliver Debian Package"
     uses: brandwatch/bw-workflow-actions/.github/workflows/debian-build-deliver-package.yaml@dev
     with:
-      package-file: package.deb
-      package-folder:
-      # prefix is usually first letter of vendor, package-name does not include metadata, but artifact-name does
-      # see http://ftp.debian.org/debian/pool/ for examples on structuring debian packages
-      artifactory-directory-and-file: pool/<prefix>/<package-name>/<artifact-name>.deb
+      package-version: ${{ github.ref_name }}
+      package-folder: # Location of the folder which contains the DEBIAN subfolder
       deb-distributions:
       deb-components:
       deb-architectures:
