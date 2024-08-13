@@ -1,0 +1,20 @@
+# For official documentation on this workflow, please refer to the link below.
+# https://github.com/brandwatch/bw-workflow-actions/blob/dev/workflows/java/java-maven-build-deploy-custom-docker-image.yaml.md
+name: CI Pipeline - Build Custom Docker Image
+
+permissions:
+  checks: write
+  contents: read
+
+on:
+  push:
+    branches:
+      - $default-branch
+
+jobs:
+  build-pipeline:
+    name: "Build Pipeline"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/java-maven-build-deploy-custom-docker-image.yaml@production
+    with:
+      jvm-version: 17    # Please update with the JVM version of your project
+    secrets: inherit
