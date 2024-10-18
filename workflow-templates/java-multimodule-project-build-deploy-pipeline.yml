@@ -1,4 +1,7 @@
----
+# For official documentation on this workflow, please refer to the links below.
+# https://github.com/brandwatch/bw-workflow-actions/blob/dev/workflows/java/java-maven-build-deploy-multi-images.md
+# https://github.com/brandwatch/bw-workflow-actions/blob/dev/workflows/java/java-maven-build-deploy-multi-libraries.md
+
 name: CI Pipeline - Java Multimodule Project Build & Deploy
 
 on:

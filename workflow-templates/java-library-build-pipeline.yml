@@ -1,3 +1,6 @@
+# For official documentation on this workflow, please refer to the link below.
+# https://github.com/brandwatch/bw-workflow-actions/blob/dev/workflows/java/java-maven-build-deploy-library.yaml.md
+
 name: CI Pipeline - Release Library
 
 on:
