@@ -1,0 +1,19 @@
+# For official documentation on this workflow, please refer to the link below.
+# https://github.com/brandwatch/bw-workflow-actions/blob/dev/workflows/docker/generic-docker-build-and-deploy.md
+
+name: CI Pipeline - Build & Deploy Custom Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  checks: write
+  contents: read
+
+jobs:
+  build-pipeline:
+    name: "Build & Deploy Docker Image"
+    uses: brandwatch/bw-workflow-actions/.github/workflows/generic-docker-build-and-deploy.yml@production
+    secrets: inherit
