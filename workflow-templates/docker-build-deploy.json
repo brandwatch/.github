@@ -1,0 +1,9 @@
+{
+    "name": "Custom Docker Build & Deploy",
+    "description": "This pipeline will take a Dockerfile and provides a build chain to push the image to Artifactory as well as deploying it to Janus whenever a new commit is pushed to the main branch",
+    "iconName": "octicon repo",
+    "categories": [
+        "deployment",
+        "Docker"
+    ]
+}
