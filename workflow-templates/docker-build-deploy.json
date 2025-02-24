@@ -5,5 +5,8 @@
     "categories": [
         "deployment",
         "Docker"
+    ],
+    "filePatterns": [
+        "^Dockerfile"
     ]
 }
