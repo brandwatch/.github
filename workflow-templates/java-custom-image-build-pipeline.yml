@@ -6,6 +6,8 @@ name: CI Pipeline - Build Custom Docker Image
 permissions:
   checks: write
   contents: read
+  security-events: write
+  actions: read
 
 on:
   push:
