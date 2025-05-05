@@ -6,6 +6,8 @@ name: CI Pipeline - Build Using Node & Deploy Static Webapp
 permissions:
   checks: write
   contents: read
+  security-events: write
+  actions: read
 
 on:
   push:

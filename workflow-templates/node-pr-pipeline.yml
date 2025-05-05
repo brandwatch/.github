@@ -8,6 +8,8 @@ permissions:
   contents: read
   issues: write
   pull-requests: write
+  security-events: write
+  actions: read
 
 on:
   workflow_dispatch:
